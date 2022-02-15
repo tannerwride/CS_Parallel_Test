@@ -35,3 +35,11 @@ The key pain that parallelism and test splitting can solve is slow build times w
 For example, the below test job is running for over 7 minutes. 
 
 <img src="images/longtestjob.png">
+
+In this case, we would want to bring up test splitting as a solution to this long duration on the job. 
+
+### What to look for..
+
+Since parallelism is primarily used for test splitting, we want to identify jobs with long duration that are **testing**. This can look different for each customer, but there are a few keywords to look for, "test" being the most obvious. 
+
+<img src="images/plaintest.png">
