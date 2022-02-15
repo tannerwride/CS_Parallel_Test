@@ -51,3 +51,13 @@ Testing jobs may also be named by their testing framework, for example `yarn`.
 Or by the type of testing (unit, end to end, integration, etc.)
 
 <img src="images/integrationtest.png">
+
+### Insights
+
+You can also view customer insights on the Insights page, looking for test jobs that may be running slowly. 
+
+<img src="images/slowtestinsights.png">
+
+You can also drill down farther if the customer is uploading test results via `store_test_results:` in their config. You can identify if a customer is uploading tests through the UI on a job dashboard. 
+
+<img src="images/uploadtestui.png">
