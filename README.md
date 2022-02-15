@@ -27,3 +27,11 @@ To view answers and possible optimization ideas, switch to the answers branch.
 - Parallelism: is running the same job (any job, it does not have to be a test job) on different nodes at the same time. Customers use parallelism for test jobs (test splitting) 95% of the time. The other 5% is to check that the programming language is used correctly (“linting”). Although test splitting takes up the majority of the use case for parallelism, the term parallelism is a general term that encompasses other use cases for running one job across multiple executors, like linting. 
 
 - Test splitting: is splitting a one test job across multiple executors. This term exclusively refers to using parallelism for test jobs and no other use cases.
+
+## Identifying Canidates for Parallelism and Test Splitting
+
+The key pain that parallelism and test splitting can solve is slow build times when running lots of tests. The first step to identifying oppurtunities for test splitting is by looking at test jobs and their durations. 
+
+For example, the below test job is running for over 7 minutes. 
+
+<img src="images/longtestjob.png">
