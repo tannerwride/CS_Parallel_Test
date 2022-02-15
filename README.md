@@ -61,3 +61,11 @@ You can also view customer insights on the Insights page, looking for test jobs 
 You can also drill down farther if the customer is uploading test results via `store_test_results:` in their config. You can identify if a customer is uploading tests through the UI on a job dashboard. 
 
 <img src="images/uploadtestui.png">
+
+### Parallelism and Test Splitting? 
+
+If the tests and their jobs that you've identified are taking longer than a client may like, it's time to suggest parallelism and test splitting. It's easy to identify jobs that are not using test splitting in the CircleCI UI. When viewing the steps of a job, you will see how many parallel runs were used. 
+
+<img src="images/oneparallel.png">
+
+We can see that there was only one "node" at use during this job, so parallelism is not being utilized. 
