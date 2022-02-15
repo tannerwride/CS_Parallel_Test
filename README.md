@@ -44,7 +44,7 @@ Since parallelism is primarily used for test splitting, we want to identify jobs
 
 <img src="images/plaintest.png">
 
-Testing jobs may also be named by their testing framework, for example `yarn`. 
+Testing jobs may also be named by their testing framework, for example `jest`. 
 
 <img src="images/yarntest.png">
 
@@ -75,3 +75,36 @@ We can see that there was only one "node" at use during this job, so parallelism
 ## Example
 
 Let's look at a customer example that may be a canidate for test splitting. Navigate to [this](https://app.circleci.com/pipelines/github/artsy/metaphysics/11196/workflows/5245a58d-423f-4c26-8203-323699640c82) customer config file. 
+
+1. What jobs in this workflow are running tests? 
+
+- [ ] yarn/type-check
+- [ ] test-jest-v1
+- [ ] test-jest-v2
+- [ ] deploy-staging
+
+Let's now look at a specific job. Open the `test-jest-v2` job. We can see that there is a test step in this job at yarn test:jest:v2. We can see that this job is not currently using parallelism to split tests because there is no breakdown of specific nodes or level of parallelism being shown.
+
+2. Is this customer uploading test results? How can we tell? 
+
+- [ ] Yes, I can see test result data in Insights
+- [ ] No, there is nothing under the tests tab. 
+
+### What now? 
+
+We've seen that this pipeline is not utilizing test splitting. We can then suggest this feature and it's benefits. But what is involved. What would the customer need to do to implement parallelism and test splitting? There are a few considerations to make when implementing parallelism: concurrency limits, Executor/Resource class credit consumption, configuration changes, etc. 
+
+## Considerations
+
+In order to adopt parallelism and test splitting, the first thing a customer will need to do is update their config file with two additions: 
+
+1. Define the amount of parallelism using the `parallelism` key. 
+
+```yml
+version: 2.1
+jobs:
+  test:
+    docker:
+      - image: cimg/<language>:<version TAG>
+    parallelism: 4
+```
