@@ -71,3 +71,7 @@ If the tests and their jobs that you've identified are taking longer than a clie
 We can see that there was only one "node" at use during this job, so parallelism is not being utilized. If parallelism was being used, it would look something like this: 
 
 <img src="images/parallelism.png">
+
+## Example
+
+Let's look at a customer example that may be a canidate for test splitting. Navigate to [this](https://app.circleci.com/pipelines/github/artsy/metaphysics/11196/workflows/5245a58d-423f-4c26-8203-323699640c82) customer config file. 
