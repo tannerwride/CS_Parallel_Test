@@ -68,4 +68,6 @@ If the tests and their jobs that you've identified are taking longer than a clie
 
 <img src="images/oneparallel.png">
 
-We can see that there was only one "node" at use during this job, so parallelism is not being utilized. 
+We can see that there was only one "node" at use during this job, so parallelism is not being utilized. If parallelism was being used, it would look something like this: 
+
+<img src="images/parallelism.png">
