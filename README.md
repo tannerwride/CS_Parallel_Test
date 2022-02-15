@@ -47,3 +47,7 @@ Since parallelism is primarily used for test splitting, we want to identify jobs
 Testing jobs may also be named by their testing framework, for example `yarn`. 
 
 <img src="images/yarntest.png">
+
+Or by the type of testing (unit, end to end, integration, etc.)
+
+<img src="images/integrationtest.png">
