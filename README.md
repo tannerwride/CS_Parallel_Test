@@ -43,3 +43,7 @@ In this case, we would want to bring up test splitting as a solution to this lon
 Since parallelism is primarily used for test splitting, we want to identify jobs with long duration that are **testing**. This can look different for each customer, but there are a few keywords to look for, "test" being the most obvious. 
 
 <img src="images/plaintest.png">
+
+Testing jobs may also be named by their testing framework, for example `yarn`. 
+
+<img src="images/yarntest.png">
