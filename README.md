@@ -108,3 +108,12 @@ jobs:
       - image: cimg/<language>:<version TAG>
     parallelism: 4
 ```
+2. Use the CircleCI CLI to tell CircleCI where the tests are, and how to split them (by timing, filesize, filename). 
+
+```yml
+ command: |
+                TEST=$(circleci tests glob **/__tests__/*.js | circleci tests split --split-by=timings)
+                yarn test $TEST
+ ```
+ 
+ 
