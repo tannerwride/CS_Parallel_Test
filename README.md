@@ -87,7 +87,7 @@ Let's look at a customer example that may be a canidate for test splitting. Navi
 
 We can see by opening up this jobs that there is a step with test in the name, as well as opening the step to see specific tests that ran. 
 
-<img src="rantests.png"> 
+<img src="images/rantests.png"> 
 
 Let's now look at a specific job. Open the `test-jest-v2` job. We can see that there is a test step in this job at yarn test:jest:v2. We can see that this job is not currently using parallelism to split tests because there is no breakdown of specific nodes or level of parallelism being shown.
 
