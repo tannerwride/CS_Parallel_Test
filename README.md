@@ -124,6 +124,6 @@ jobs:
  
  ### Resource Class
  
- For example, let's say a test job that uses a resource class of Docker/Large and has a parallelism level of 8. This job will spin up 8 Large Docker executors. This will count towards credit usage. Customers may want to adjust resources to meet needs and monotor credit usage. 
+ For example, let's say a test job that uses a resource class of Docker/Large and has a parallelism level of 8. This job will spin up 8 Large Docker executors. This will count towards credit usage for the time those containers are running. Customers may want to adjust resources to meet needs and monotor credit usage. 
  
  <img src="images/level8.png"> 
