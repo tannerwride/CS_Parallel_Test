@@ -122,8 +122,20 @@ jobs:
  
  Running jobs in parallel does count towards concurrency limits. The more parallel nodes are specified the higher concurreny count you will have. For example, a parallelism level of 4 will spin up 4 nodes, counting towards concurrency. 
  
- ### Resource Class
+ ### Resource Classes
  
  For example, let's say a test job that uses a resource class of Docker/Large and has a parallelism level of 8. This job will spin up 8 Large Docker executors. This will count towards credit usage for the time those containers are running. Customers may want to adjust resources to meet needs and monotor credit usage. 
  
  <img src="images/level8.png"> 
+ 
+ ## Additional Resources
+ 
+ ### Case Studies
+ 
+ [Amio](https://circleci.com/blog/how-to-boost-build-time-with-test-parallelism/) reduced testing times by 40%
+ [Zygo](https://medium.com/sumone-technical-blog/parallel-tests-on-circleci-5236b8336031) testing decreased by 70%
+ 
+ 
+
+
+
