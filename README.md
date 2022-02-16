@@ -81,16 +81,30 @@ Let's look at a customer example that may be a canidate for test splitting. Navi
 1. What jobs in this workflow are running tests? 
 
 - [ ] yarn/type-check
-- [ ] test-jest-v1
-- [ ] test-jest-v2
+- [x] test-jest-v1
+- [x] test-jest-v2
 - [ ] deploy-staging
+
+We can see by opening up this jobs that there is a step with test in the name, as well as opening the step to see specific tests that ran. 
+
+<img src="rantests.png"> 
 
 Let's now look at a specific job. Open the `test-jest-v2` job. We can see that there is a test step in this job at yarn test:jest:v2. We can see that this job is not currently using parallelism to split tests because there is no breakdown of specific nodes or level of parallelism being shown.
 
 2. Is this customer uploading test results? How can we tell? 
 
 - [ ] Yes, I can see test result data in Insights
-- [ ] No, there is nothing under the tests tab. 
+- [x] No, there is nothing under the tests tab. 
+
+<img src="images/notest.png">
+
+Should we suggest uploading test results? Absolutely! Uploading test results unlocks testing by timing data (the most efficient way), and test insights. We will cover more on this in a future training, but as a teaser, uploading test results offers the following benefits:
+
+- Predictability
+- Oppurtunity to learn from mistakes 
+- Mitigate risk
+- Flaky test detection
+- Etc!
 
 ### What now? 
 
