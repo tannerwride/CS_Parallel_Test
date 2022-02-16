@@ -96,6 +96,8 @@ We've seen that this pipeline is not utilizing test splitting. We can then sugge
 
 ## Considerations
 
+### Config Updates
+
 In order to adopt parallelism and test splitting, the first thing a customer will need to do is update their config file with two additions: 
 
 1. Define the amount of parallelism using the `parallelism` key. 
@@ -116,4 +118,12 @@ jobs:
                 yarn test $TEST
  ```
  
+ ### Concurrency Limits
  
+ Running jobs in parallel does count towards concurrency limits. The more parallel nodes are specified the higher concurreny count you will have. For example, a parallelism level of 4 will spin up 4 nodes, counting towards concurrency. 
+ 
+ ### Resource Class
+ 
+ For example, let's say a test job that uses a resource class of Docker/Large and has a parallelism level of 8. This job will spin up 8 Large Docker executors. This will count towards credit usage. Customers may want to adjust resources to meet needs and monotor credit usage. 
+ 
+ <img src="images/level8.png"> 
