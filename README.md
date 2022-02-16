@@ -6,6 +6,8 @@ There are two branches of this activity, the main branch and the answers branch.
 
 To view answers and possible optimization ideas, switch to the answers branch. 
 
+<img src="images/answers.png"
+
 ## Prereqs
 
 - Completion of the CSM training in Circle Up
